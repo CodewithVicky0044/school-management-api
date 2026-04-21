@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "fdb90e9b-cf3b-49b9-ba96-c99896d3ac1f",
+    "name": "School Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40669566"
+  },
+  "item": [
+    {
+      "name": "School API",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"ABC School\",\r\n  \"address\": \"Churu\",\r\n  \"latitude\": 28.2926,\r\n  \"longitude\": 74.9679\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Schools",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"ABC School\",\r\n  \"address\": \"Churu\",\r\n  \"latitude\": 28.2926,\r\n  \"longitude\": 74.9679\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/listSchools?latitude=28.29&longitude=74.96",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "28.29"
+            },
+            {
+              "key": "longitude",
+              "value": "74.96"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
